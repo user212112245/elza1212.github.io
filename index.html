@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TKJ 1</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+        nav {
+            background-color: #f2f2f2;
+            padding: 10px;
+            position: relative;
+            z-index: 2;
+        }
+        nav a {
+            text-decoration: none;
+            color: #333;
+            padding: 5px 15px;
+        }
+        nav a:hover {
+            background-color: #ddd;
+        }
+        section {
+            padding: 20px;
+            position: relative;
+            z-index: 2;
+            background: rgba(255, 255, 255, 0.8); /* Slightly transparent background for better readability */
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            z-index: 2;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        /* Tambahkan style untuk membuat teks pada sel mata pelajaran menjadi tengah */
+        td:nth-child(2) {
+            text-align: center;
+        }
+        /* Styles for background video */
+        #background-video {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: 1;
+            background-size: cover;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <!-- Background Video -->
+    <video id="background-video" autoplay loop muted>
+        <source src="asset/video-indonesia.mp4" type="video/mp4"> <!-- Ganti 'background_video.mp4' dengan URL atau path ke video latar belakang yang kamu miliki -->
+        Your browser does not support the video tag.
+    </video>
+
+    <header>
+        <h1>Selamat Datang di Kelas TKJ 1</h1>
+    </header>
+    <nav>
+        <a href="#">Beranda</a>
+        <a href="#jadwal_pelajaran">Jadwal Pelajaran</a>
+        <a href="#jadwal_piket">Jadwal Piket</a>
+        <!-- Tautkan tautan navigasi ke ID tabel absensi siswa -->
+        <a href="#absensi_siswa">Absensi Siswa</a>
+    </nav>
+    <section id="jadwal_pelajaran">
+        <h2>Jadwal Pelajaran</h2>
+        <table>
+            <tr>
+                <th>Hari</th>
+                <th style="text-align: center;">Mata Pelajaran</th>
+            </tr>
+            <tr>
+                <td>Senin</td>
+                <td style="text-align: center;">TJBL (1-2), B. Inggris (3-4), TLJ (5-6), PKK (7-8)</td>
+            </tr>
+            <tr>
+                <td>Selasa</td>
+                <td style="text-align: center;">PKN (1-2), ASJ (3-4), AIJ (5-6), MTK (7-8)</td>
+            </tr>
+            <tr>
+                <td>Rabu</td>
+                <td style="text-align: center;">AIJ (1-2), ASJ (3-4), TLJ (5-6), PKK (7-8)</td>
+            </tr>
+            <tr>
+                <td>Kamis</td>
+                <td style="text-align: center;">AIJ (1-2), B. Indonesia (3), PABP (4), TJBL (5-6), PKK (7), B. Inggris (8)</td>
+            </tr>
+            <tr>
+                <td>Jum'at</td>
+                <td style="text-align: center;">MTK (1-2), PKK (3-4), PJOK (5-6), TJBL (7-8)</td>
+            </tr>
+            <tr>
+                <td>Sabtu</td>
+                <td style="text-align: center;">PABP (1-2), ASJ (3-4), TLJ (5-6), B. Indonesia (7-8)</td>
+            </tr>
+        </table>
+    </section>
+    
+    
+    <section id="jadwal_piket">
+        <h2>Jadwal Piket</h2>
+        <table>
+            <tr>
+                <th>Hari</th>
+                <th>Piket</th>
+            </tr>
+            <tr>
+                <td>Senin</td>
+                <td>Ani</td>
+            </tr>
+            <tr>
+                <td>Selasa</td>
+                <td>Budi</td>
+            </tr>
+            <tr>
+                <td>Rabu</td>
+                <td>Cici</td>
+            </tr>
+            <tr>
+                <td>Kamis</td>
+                <td>Dani</td>
+            </tr>
+            <tr>
+                <td>Jum'at</td>
+                <td>Eva</td>
+            </tr>
+            <tr>
+                <td>Sabtu</td>
+                <td>Fajar</td>
+            </tr>
+        </table>
+    </section>
+    <section id="absensi_siswa">
+        <h2>Absensi Siswa</h2>
+        <table>
+            <tr>
+                <th>No</th>
+                <th>Nama Siswa</th>
+                <th>Kelas</th>
+                <th>Status</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>ALISAH TANTRI ABQORIYAH</td>
+                <td>XI TKJ 1</td>
+                <td>
+                    <input type="radio" name="absen1" value="Hadir">Hadir
+                    <input type="radio" name="absen1" value="Alfa">Alfa
+                    <input type="radio" name="absen1" value="Sakit">Sakit
+                    <input type="radio" name="absen1" value="Izin">Izin
+                </td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>ANDIKA PUTRA SULAEMAN</td>
+                <td>XI TKJ 1</td>
+                <td>
+                    <input type="radio" name="absen2" value="Hadir">Hadir
+                    <input type="radio" name="absen2" value="Alfa">Alfa
+                    <input type="radio" name="absen2" value="Sakit">Sakit
+                    <input type="radio" name="absen2" value="Izin">Izin
+                </td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>ANGGIANA SAPITRI</td>
+                <td>XI TKJ 1</td>
+                <td>
+                    <input type="radio" name="absen3" value="Hadir">Hadir
+                    <input type="radio" name="absen3" value="Alfa">Alfa
+                    <input type="radio" name="absen3" value="Sakit">Sakit
+                    <input type="radio" name="absen3" value="Izin">Izin
+                </td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>ARIZAL</td>
+                <td>XI TKJ 1</td>
+                <td>
+                    <input type="radio" name="absen4" value="Hadir">Hadir
+                    <input type="radio" name="absen4" value="Alfa">Alfa
+                    <input type="radio" name="absen4" value="Sakit">Sakit
+                    <input type="radio" name="absen4" value="Izin">Izin
+                </td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>ASEP SOPIAN</td>
+                <td>XI TKJ 1</td>
+                <td>
+                    <input type="radio" name="absen5" value="Hadir">Hadir
+                    <input type="radio" name="absen5" value="Alfa">Alfa
+                    <input type="radio" name="absen5" value="Sakit">Sakit
+                    <input type="radio" name="absen5" value="Izin">Izin
+                </td>
+            </tr>
+            <!-- Tambahkan siswa lainnya sesuai dengan daftar -->
+            <tr>
+                <td>6</td>
+                <td>CANDRA ADRIAN FIRMANSYAH</td>
+                <td>XI TKJ 1</td>
+                <td>
+                    <input type="radio" name="absen6" value="Hadir">Hadir
+                    <input type="radio" name="absen6" value="Alfa">Alfa
+                    <input type="radio" name="absen6" value="Sakit">Sakit
+                    <input type="radio" name="absen6" value="Izin">Izin
+                </td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>CANDRA FAREL ZAKARIA</td>
+                <td>XI TKJ 1</td>
+                <td>
+                    <input type="radio" name="absen7" value="Hadir">Hadir
+                    <input type="radio" name="absen7" value="Alfa">Alfa
+                    <input type="radio" name="absen7" value="Sakit">Sakit
+                    <input type="radio" name="absen7" value="Izin">Izin
+                </td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>ENI RAHMAWATI</td>
+                <td>XI TKJ 1</td>
+                <td>
+                    <input type="radio" name="absen8" value="Hadir">Hadir
+                    <input type="radio" name="absen8" value="Alfa">Alfa
+                    <input type="radio" name="absen8" value="Sakit">Sakit
+                    <input type="radio" name="absen8" value="Izin">Izin
+                </td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td>ERGI JULIANSYAH ISLAMI PUTRA</td>
+                <td>XI TKJ 1</td>
+                <td>
+                    <input type="radio" name="absen9" value="Hadir">Hadir
+                    <input type="radio" name="absen9" value="Alfa">Alfa
+                    <input type="radio" name="absen9" value="Sakit">Sakit
+                    <input type="radio" name="absen9" value="Izin">Izin
+                </td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>FERDIANA ARSYAD</td>
+                <td>XI TKJ 1</td>
+                <td>
+                    <input type="radio" name="absen10" value="Hadir">Hadir
+                    <input type="radio" name="absen10" value="Alfa">Alfa
+                    <input type="radio" name="absen10" value="Sakit">Sakit
+                    <input type="radio" name="absen10" value="Izin">Izin
+                </td>
+            </tr>
+            <tr>
+                <td>11</td>
+                <td>FIRA AMELIA</td>
+                <td>XI TKJ 1</td>
+                <td>
+                    <input type="radio" name="absen11" value="Hadir">Hadir
+                    <input type="radio" name="absen11" value="Alfa">Alfa
+                    <input type="radio" name="absen11" value="Sakit">Sakit
+                    <input type="radio" name="absen11" value="Izin">Izin
+                </td>
+            </tr>
+            <tr>
+                <td>12</td>
+                <td>GERRARD FAJAR FAUZAN</td>
+                <td>XI TKJ 1</td>
+                <td>
+                    <input type="radio" name="absen12" value="Hadir">Hadir
+                    <input type="radio" name="absen12" value="Alfa">Alfa
+                    <input type="radio" name="absen12" value="Sakit">Sakit
+                    <input type="radio" name="absen12" value="Izin">Izin
+                </td>
+            </tr>
+            <tr>
+                <td>13</td>
+                <td>GIAN YUNUS RAMDANI</td>
+                <td>XI TKJ 1</td>
+                <td>
+                    <input type="radio" name="absen13" value="Hadir">Hadir
+                    <input type="radio" name="absen13" value="Alfa">Alfa
+                    <input type="radio" name="absen13" value="Sakit">Sakit
+                    <input type="radio" name="absen13" value="Izin">Izin
+                </td>
+            </tr>
+            <tr>
+                <td>14</td>
+                <td>GUNTUR HERMAWAN</td>
+                <td>XI TKJ 1</td>
+                <td>
+                    <input type="radio" name="absen14" value="Hadir">Hadir
+                    <input type="radio" name="absen14" value="Alfa">Alfa
+                    <input type="radio" name="absen14" value="Sakit">Sakit
+                    <input type="radio" name="absen14" value="Izin">Izin
+                </td>
+            </tr>
+            <tr>
+                <td>15</td>
+                <td>HARLAN M SEPTIAN</td>
+                <td>XI TKJ 1</td>
+                <td>
+                    <input type="radio" name="absen15" value="Hadir">Hadir
+                    <input type="radio" name="absen15" value="Alfa">Alfa
+                    <input type="radio" name="absen15" value="Sakit">Sakit
+                    <input type="radio" name="absen15" value="Izin">Izin
+                </td>
+            </tr>
+            <tr>
+                <td>16</td>
+                <td>JEPRI</td>
+                <td>XI TKJ 1</td>
+                <td>
+                    <input type="radio" name="absen16" value="Hadir">Hadir
+                    <input type="radio" name="absen16" value="Alfa">Alfa
+                    <input type="radio" name="absen16" value="Sakit">Sakit
+                    <input type="radio" name="absen16" value="Izin">Izin
+                </td>
+            </tr>
+            <tr>
+                <td>17</td>
+                <td>LEA ALENKA</td>
+                <td>XI TKJ 1</td>
+                <td>
+                    <input type="radio" name="absen17" value="Hadir">Hadir
+                    <input type="radio" name="absen17" value="Alfa">Alfa
+                    <input type="radio" name="absen17" value="Sakit">Sakit
+                    <input type="radio" name="absen17" value="Izin">Izin
+                </td>
+            </tr>
+            <tr>
+                <td>18</td>
+                <td>M. RESTU BUMI ARIFIN</td>
+                <td>XI TKJ 1</td>
+                <td>
+                    <input type="radio" name="absen18" value="Hadir">Hadir
+                    <input type="radio" name="absen18" value="Alfa">Alfa
+                    <input type="radio" name="absen18" value="Sakit">Sakit
+                    <input type="radio" name="absen18" value="Izin">Izin
+                </td>
+            </tr>
+            <tr>
+                <td>19</td>
+                <td>MELI RAHMAWATI</td>
+                <td>XI TKJ 1</td>
+                <td>
+                    <input type="radio" name="absen19" value="Hadir">Hadir
+                    <input type="radio" name="absen19" value="Alfa">Alfa
+                    <input type="radio" name="absen19" value="Sakit">Sakit
+                    <input type="radio" name="absen19" value="Izin">Izin
+                </td>
+            </tr>
+            <tr>
+                <td>20</td>
+                <td>MILKY SIHABBUDIN</td>
+                <td>XI TKJ 1</td>
+                <td>
+                    <input type="radio" name="absen20" value="Hadir">Hadir
+                    <input type="radio" name="absen20" value="Alfa">Alfa
+                    <input type="radio" name="absen20" value="Sakit">Sakit
+                    <input type="radio" name="absen20" value="Izin">Izin
+                </td>
+            </tr>
+            <tr>
+                <td>21</td>
+                <td>NENG SILVIA SEPTIANI</td>
+                <td>XI TKJ 1</td>
+                <td>
+                    <input type="radio" name="absen21" value="Hadir">Hadir
+                    <input type="radio" name="absen21" value="Alfa">Alfa
+                    <input type="radio" name="absen21" value="Sakit">Sakit
+                    <input type="radio" name="absen21" value="Izin">Izin
+                </td>
+            </tr>
+            <tr>
+                <td>22</td>
+                <td>REHAN SETIAWAN</td>
+                <td>XI TKJ 1</td>
+                <td>
+                    <input type="radio" name="absen23" value="Hadir">Hadir
+                    <input type="radio" name="absen23" value="Alfa">Alfa
+                    <input type="radio" name="absen23" value="Sakit">Sakit
+                    <input type="radio" name="absen23" value="Izin">Izin
+                </td>
+            </tr>
+            <tr>
+                <td>23</td>
+                <td>RIDWAN SURAHMAN</td>
+                <td>XI TKJ 1</td>
+                <td>
+                    <input type="radio" name="absen24" value="Hadir">Hadir
+                    <input type="radio" name="absen24" value="Alfa">Alfa
+                    <input type="radio" name="absen24" value="Sakit">Sakit
+                    <input type="radio" name="absen24" value="Izin">Izin
+                </td>
+            </tr>
+            <tr>
+                <td>24</td>
+                <td>RIPAL APRIZAL</td>
+                <td>XI TKJ 1</td>
+                <td>
+                    <input type="radio" name="absen25" value="Hadir">Hadir
+                    <input type="radio" name="absen25" value="Alfa">Alfa
+                    <input type="radio" name="absen25" value="Sakit">Sakit
+                    <input type="radio" name="absen25" value="Izin">Izin
+                </td>
+            </tr>
+            <tr>
+                <td>25</td>
+                <td>SAEPULOH</td>
+                <td>XI TKJ 1</td>
+                <td>
+                    <input type="radio" name="absen26" value="Hadir">Hadir
+                    <input type="radio" name="absen26" value="Alfa">Alfa
+                    <input type="radio" name="absen26" value="Sakit">Sakit
+                    <input type="radio" name="absen26" value="Izin">Izin
+                </td>
+            </tr>
+            <tr>
+                <td>26</td>
+                <td>SAKILA</td>
+                <td>XI TKJ 1</td>
+                <td>
+                    <input type="radio" name="absen27" value="Hadir">Hadir
+                    <input type="radio" name="absen27" value="Alfa">Alfa
+                    <input type="radio" name="absen27" value="Sakit">Sakit
+                    <input type="radio" name="absen27" value="Izin">Izin
+                </td>
+            </tr>
+            <tr>
+                <td>27</td>
+                <td>SARASWATI</td>
+                <td>XI TKJ 1</td>
+                <td>
+                    <input type="radio" name="absen28" value="Hadir">Hadir
+                    <input type="radio" name="absen28" value="Alfa">Alfa
+                    <input type="radio" name="absen28" value="Sakit">Sakit
+                    <input type="radio" name="absen28" value="Izin">Izin
+                </td>
+            </tr>
+            <tr>
+                <td>28</td>
+                <td>SONI SOPIAN</td>
+                <td>XI TKJ 1</td>
+                <td>
+                    <input type="radio" name="absen29" value="Hadir">Hadir
+                    <input type="radio" name="absen29" value="Alfa">Alfa
+                    <input type="radio" name="absen29" value="Sakit">Sakit
+                    <input type="radio" name="absen29" value="Izin">Izin
+                </td>
+            </tr>
+            <tr>
+                <td>29</td>
+                <td>WISNU PRAMANA</td>
+                <td>XI TKJ 1</td>
+                <td>
+                    <input type="radio" name="absen30" value="Hadir">Hadir
+                    <input type="radio" name="absen30" value="Alfa">Alfa
+                    <input type="radio" name="absen30" value="Sakit">Sakit
+                    <input type="radio" name="absen30" value="Izin">Izin
+                </td>
+            </tr>
+            <tr>
+                <td>30</td>
+                <td>WITTRIA APRILIANTI</td>
+                <td>XI TKJ 1</td>
+                <td>
+                    <input type="radio" name="absen31" value="Hadir">Hadir
+                    <input type="radio" name="absen31" value="Alfa">Alfa
+                    <input type="radio" name="absen31" value="Sakit">Sakit
+                    <input type="radio" name="absen31" value="Izin">Izin
+                </td>
+            </tr>
+        </table>
+    </section>
+</body>
+</html>
